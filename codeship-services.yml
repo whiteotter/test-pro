@@ -3,4 +3,5 @@ demo:
     image: test-pro
     dockerfile_path: Dockerfile
   environment:
-    - MY_VAR=hello
+    - MY_VAR=$CI_COMMIT_ID
+  cached: true
