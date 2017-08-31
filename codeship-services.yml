@@ -2,5 +2,5 @@ demo:
   build:
     image: test-pro
     dockerfile_path: Dockerfile
-    environment:
-      - MY_VAR=$CI_COMMIT_ID
+  environment:
+    - MY_VAR=hello
