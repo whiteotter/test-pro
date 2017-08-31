@@ -1,12 +1,15 @@
-- type: serial
-  name: print all default environmental variables
+- name: print all default environmental variables
   service: demo
   command: ruby print_env_vars.rb
-- type: serial
-  name: echo var from command line
+
+- name: echo default var from command line
   service: demo
   command: echo $CI_COMMIT_ID
-- type: serial
-  name: echo custom var
+
+- name: echo custom var from command line
   service: demo
   command: echo $MY_VAR
+
+- name: echo dockerfile declared env from command line
+  service: demo
+  command: echo $FROM_DOCKERFILE
