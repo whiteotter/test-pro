@@ -6,6 +6,6 @@ ENV DECLARED_ENV_FROM_DOCKERFILE=VAL_FROM_DOCKERFILE
 ARG PASSING_THROUGH_BUILD_ARG
 ENV PASSING_THROUGH_BUILD_ARG_ENV=PASSING_THROUGH_BUILD_ARG
 
-ADD print_env_vars.rb entrypoint.sh .
+ADD print_env_vars.rb new_var.sh .
 
-ENTRYPOINT["source", "entrypoint.sh"]
+RUN "source new_var.sh"
