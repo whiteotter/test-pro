@@ -1,17 +1,65 @@
-- type: parallel
-  steps:
-    - name: checkrb
-      service: demo
-      command: bundle exec ruby check.rb
-    - name: test
-      service: demo
-      command: bundle exec ruby test.rb
-
 - type: serial
   steps:
-    - name: dockerhub_push
+    - name: print CI_BRANCH
       service: demo
-      type: push
-      image_name: dkcodeship/test-pro
-      registry: https://index.docker.io/v1/
-      encrypted_dockercfg_path: dockercfg.encrypted
+      command: echo $CI_BRANCH
+- type: serial
+  steps:
+    - name: print CI_BUILD_ID
+      service: demo
+      command: echo $CI_BUILD_ID
+- type: serial
+  steps:
+    - name: print CI_COMMITTER_EMAIL
+      service: demo
+      command: echo $CI_COMMITTER_EMAIL
+- type: serial
+  steps:
+    - name: print CI_COMMITTER_NAME
+      service: demo
+      command: echo $CI_COMMITTER_NAME
+- type: serial
+  steps:
+    - name: print CI_COMMITTER_USERNAME
+      service: demo
+      command: echo $CI_COMMITTER_USERNAME
+- type: serial
+  steps:
+    - name: print CI_COMMIT_DESCRIPTION
+      service: demo
+      command: echo $CI_COMMIT_DESCRIPTION
+- type: serial
+  steps:
+    - name: print CI_COMMIT_ID
+      service: demo
+      command: echo $CI_COMMIT_ID
+- type: serial
+  steps:
+    - name: print CI_COMMIT_MESSAGE
+      service: demo
+      command: echo $CI_COMMIT_MESSAGE
+- type: serial
+  steps:
+    - name: print CI_NAME
+      service: demo
+      command: echo $CI_NAME
+- type: serial
+  steps:
+    - name: print CI_PROJECT_ID
+      service: demo
+      command: echo $CI_PROJECT_ID
+- type: serial
+  steps:
+    - name: print CI_REPO_NAME
+      service: demo
+      command: echo $CI_REPO_NAME
+- type: serial
+  steps:
+    - name: print CI_STRING_TIME
+      service: demo
+      command: echo $CI_STRING_TIME
+- type: serial
+  steps:
+    - name: print CI_TIMESTAMP
+      service: demo
+      command: echo $CI_TIMESTAMP
