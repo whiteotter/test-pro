@@ -1,5 +1,12 @@
 - type: serial
-  steps:
-    - name: print CI_BRANCH
-      service: demo
-      command: ruby print_env_vars.rb
+  name: print all default environmental variables
+  service: demo
+  command: ruby print_env_vars.rb
+- type: serial
+  name: echo var from command line
+  service: demo
+  command: echo $CI_COMMIT_ID
+- type: serial
+  name: echo custom var
+  service: demo
+  command: echo $MY_VAR
