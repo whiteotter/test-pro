@@ -2,6 +2,7 @@
 FROM ruby:2.2.1
 
 ENV FROM_DOCKERFILE=VAL_FROM_DOCKERFILE
+ENV MY_VAR
 
 # update and install dependencies
 RUN apt-get update -qq
