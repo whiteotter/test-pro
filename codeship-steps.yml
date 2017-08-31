@@ -1,15 +1,3 @@
 - name: print all default environmental variables
   service: demo
   command: ruby print_env_vars.rb
-
-- name: echo default var from command line
-  service: demo
-  command: echo $CI_COMMIT_ID
-
-- name: echo custom var from command line
-  service: demo
-  command: echo $MY_VAR
-
-- name: echo dockerfile declared env from command line
-  service: demo
-  command: echo $FROM_DOCKERFILE

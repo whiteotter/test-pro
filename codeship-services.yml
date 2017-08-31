@@ -2,6 +2,8 @@ demo:
   build:
     image: test-pro
     dockerfile_path: Dockerfile
+    args:
+      PASSING_THROUGH_BUILD_ARG: $CI_COMMIT_ID
   environment:
-    - MY_VAR=$CI_COMMIT_ID
+    - DECLARED_ENV_FROM_YML=$CI_COMMIT_ID
   cached: true
