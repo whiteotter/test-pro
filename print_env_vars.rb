@@ -12,6 +12,8 @@ keys = %w{
   CI_REPO_NAME
   CI_STRING_TIME
   CI_TIMESTAMP
+  MY_VAR
+  FROM_DOCKERFILE
 }
 
 result = keys.each do |k|
