@@ -8,4 +8,4 @@ ENV PASSING_THROUGH_BUILD_ARG_ENV=PASSING_THROUGH_BUILD_ARG
 
 ADD print_env_vars.rb entrypoint.sh .
 
-ENTRYPOINT["export", "$ENTRYPOINTED_VAR", "$CI_COMMIT_ID"]
+ENTRYPOINT["source", "entrypoint.sh"]
