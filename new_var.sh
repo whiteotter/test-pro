@@ -1,0 +1,1 @@
+export NEW_VAR=$CI_COMMIT_ID
