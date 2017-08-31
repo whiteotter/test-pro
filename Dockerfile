@@ -9,4 +9,4 @@ ENV PASSING_THROUGH_BUILD_ARG_ENV=PASSING_THROUGH_BUILD_ARG
 ADD print_env_vars.rb .
 ADD new_var.sh .
 
-RUN "source new_var.sh"
+RUN /bin/bash -c "source new_var.sh"
