@@ -1,3 +1,7 @@
 - name: print all default environmental variables
   service: demo
   command: ruby print_env_vars.rb
+
+- name: print from bash -c
+  service: demo
+  command: /bin/bash -c 'echo $CI_BRANCH'
