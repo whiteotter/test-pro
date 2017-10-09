@@ -6,6 +6,6 @@
   service: demo
   command: /bin/bash -c 'echo $CI_BRANCH'
 
-- name: print plaintext
+- name: print commit id passed to build argument
   service: demo
-  command: /bin/bash -c 'echo kaBlaaah!'  
+  command: /bin/bash -c 'cat commit_id.txt'
